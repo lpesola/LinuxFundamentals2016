@@ -1,0 +1,12 @@
+set terminal dumb
+set style data linespoints
+set title "Highest temperatures in 11 of 2011"
+set xlabel "Date"
+set ylabel "Temperatures"
+set timefmt "%Y.%m.%d"
+set yrange [ 0 : 100 ]
+set xdata time
+set xrange [ "2011.11.01":"2011.11.30" ]
+set format x "%d.%m.%Y"
+set datafile separator " "
+plot "temp-temps.txt" using 1:2

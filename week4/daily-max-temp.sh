@@ -24,3 +24,8 @@ for dir in $(find ../week3 -type d -name 2011.11.* | sort)
    # to get the date, remove everything from the path except for the 10 last characters 
    echo $(echo $dir | sed -r 's/.*(.{10})/\1/') " "$biggest_temp >> temp-temps.txt
 done
+
+
+# hi-temp-plot gnuplot script automatically creates the desired file
+# (in jpeg: ukko cluster's gnuplot doesn't have the option to use eps)
+gnuplot hi-temp-plot

@@ -1,0 +1,2 @@
+set terminal dumb
+plot "random-data.txt" using 1:2

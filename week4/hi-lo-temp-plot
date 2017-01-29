@@ -1,0 +1,14 @@
+set terminal jpeg
+set style data linespoints
+#set title "Highest temperatures in 11 of 2011"
+set xlabel "Date"
+set ylabel "Temperatures"
+set timefmt "%Y.%m.%d"
+set yrange [ 0 : 30 ]
+set xdata time
+set xrange [ "2011.11.01":"2011.11.30" ]
+set format x "%d.%m.%Y"
+set datafile separator " "
+#set output 'max-min-temps-2011-11.jpeg'
+plot "min-max-temps.dat" using 1:2, "min-max-temps.dat" using 1:4
+
